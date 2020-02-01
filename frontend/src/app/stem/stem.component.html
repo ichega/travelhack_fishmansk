@@ -1,1 +1,43 @@
-<p>stem works!</p>
+<div class="auth-main-container" nz-row nzType="flex" nzJustify="center" nzAlign="middle">
+
+
+    <div nz-col nzSpan="12" class="froms-container">
+        <!-- <div nz-row nzType="flex" nzJustify="end">
+            <i nz-icon nzType="close" nzTheme="outline"></i>
+        </div> -->
+        <div nz-row nzSpan="12">
+            <h2>Восстановить пароль</h2>
+        </div>
+
+        <div nz-row nzSpan="12">
+            <nz-input-group [nzSuffix]="suffixTemplateMail">
+                <input type="text" class="input-style" placeholder="Введите вашу почту" />
+            </nz-input-group>
+            <ng-template #suffixTemplateMail>
+                <i nz-icon nzType="mail" nzTheme="outline"></i>
+            </ng-template>
+        </div>
+        <!-- <div nz-row nzSpan="12">
+            <nz-input-group [nzSuffix]="suffixTemplate">
+                <input
+                    [type]="passwordVisible ? 'text' : 'password'"
+                    class="input-style"
+                    placeholder="Введите свой пароль"
+                    [(ngModel)]="password"
+                />
+            </nz-input-group>
+            <ng-template #suffixTemplate>
+                <i nz-icon [nzType]="passwordVisible ? 'eye-invisible' : 'eye'" (click)="passwordVisible = !passwordVisible"></i>
+            </ng-template>
+        </div> -->
+
+        <!-- <a routerLink="/regist">У вас нет аккаунта?</a> -->
+    
+        <div nz-row nzSpan="12" style="margin-top: 20px;" nzType="flex" nzJustify="center"> 
+                <button class="button-style" nzType="primary">получить новый пароль</button>
+        </div>
+           
+    </div>
+
+
+</div>
