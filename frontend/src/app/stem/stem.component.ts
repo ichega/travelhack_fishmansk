@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stem.component.css']
 })
 export class StemComponent implements OnInit {
-
+  stem="none"
   constructor() { }
 
   ngOnInit() {
