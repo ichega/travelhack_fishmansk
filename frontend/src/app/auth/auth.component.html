@@ -11,7 +11,7 @@
 
         <div nz-row nzSpan="12">
             <nz-input-group [nzSuffix]="suffixTemplateUser">
-                <input type="text" class="input-style" placeholder="Введите ваш логин" />
+                <input [(ngModel)]="user.Login" type="text" class="input-style" placeholder="Введите ваш логин" />
             </nz-input-group>
             <ng-template #suffixTemplateUser>
                 <i nz-icon nzType="user"></i>
@@ -23,7 +23,7 @@
                     [type]="passwordVisible ? 'text' : 'password'"
                     class="input-style"
                     placeholder="Введите свой пароль"
-                    [(ngModel)]="password"
+                    [(ngModel)]="user.Password"
                 />
             </nz-input-group>
             <ng-template #suffixTemplate>
@@ -32,11 +32,11 @@
         </div>
 
         <div nz-row nzSpan="12" style="margin-top: 20px;" nzType="flex" nzJustify="center"> 
-            <button class="button-style" nzType="primary">войти</button>
+            <button class="button-style" nzType="primary" (click)="sendDataUser(user)">войти</button>
         </div>       
 
         <div [ngStyle]="{display: stem}">
-            <p class="message" ><a style="color: red" routerLink="/stem">Забыли свой логин или пароль? </a></p>
+            <p class="message"><a style="color: red" routerLink="/stem">Забыли свой логин или пароль? </a></p>
         </div>
 
         <p class="message"><a routerLink="/regist" style="color: #4CAF50;">Создать аккаунт?</a></p>
