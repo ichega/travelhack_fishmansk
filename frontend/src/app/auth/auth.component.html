@@ -6,13 +6,16 @@
             <i nz-icon nzType="close" nzTheme="outline"></i>
         </div> -->
         <div nz-row nzSpan="12">
-            <h1>Войти в сервис</h1>
+            <h2>Войти в сервис</h2>
         </div>
 
         <div nz-row nzSpan="12">
-            <nz-input-group>
+            <nz-input-group [nzSuffix]="suffixTemplateUser">
                 <input type="text" class="input-style" placeholder="Введите ваш логин" />
             </nz-input-group>
+            <ng-template #suffixTemplateUser>
+                <i nz-icon nzType="user"></i>
+            </ng-template>
         </div>
         <div nz-row nzSpan="12">
             <nz-input-group [nzSuffix]="suffixTemplate">
@@ -29,11 +32,15 @@
         </div>
 
         <!-- <a routerLink="/regist">У вас нет аккаунта?</a> -->
-    
+
         <div nz-row nzSpan="12" style="margin-top: 20px;" nzType="flex" nzJustify="center"> 
-                <button class="button-style" nzType="primary">войти</button>
+            <button class="button-style" nzType="primary">войти</button>
+        </div>       
+
+        <div [ngStyle]="{display: stem}">
+            <p class="message" ><a style="color: red" routerLink="/stem">Забыли свой логин или пароль? </a></p>
         </div>
-           
+        <p class="message"><a routerLink="/regist" style="color: #4CAF50;">Создать аккаунт?</a></p>
     </div>
 
 
