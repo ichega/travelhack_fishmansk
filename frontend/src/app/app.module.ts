@@ -14,6 +14,7 @@ import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { RegistComponent } from './regist/regist.component';
+import { StemComponent } from './stem/stem.component';
 registerLocaleData(en);
 
 
@@ -21,7 +22,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     AuthComponent,
-    RegistComponent
+    RegistComponent,
+    StemComponent
   ],
   imports: [
     BrowserModule,
