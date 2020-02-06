@@ -3,13 +3,27 @@
     <button (click)="ModalEvent(0)">x</button>  
 </div>
 <div >
-    <nz-page-header (nzBack)="onBack()" nzBackIcon nzTitle="Title" nzSubtitle="This is a subtitle"> </nz-page-header>
+    <div nz-row class="header-block">
+    <nz-page-header (nzBack)="onBack()" > 
+        
+        <nz-page-header-title><img src="../../assets/logo2.png" width="139" height="25" ></nz-page-header-title>
+        <nz-divider class="on-main-divider" nzType="vertical"></nz-divider>
+        <nz-page-header-title>Путешествия</nz-page-header-title>
+        <nz-divider class="on-main-divider" nzType="vertical"></nz-divider>
+
+        <nz-page-header-extra>
+        <button nz-button class="button-on-header">Подбор туров</button>
+        <button nz-button class="button-on-header">Карты</button>
+      </nz-page-header-extra>
+    </nz-page-header>
+</div>
 </div>
 <div class="main-container" nz-row nzType="flex" nzJustify="center" nzAlign="top">
     <div nz-col nzXs="20" nzSm="4" nzMd="6" nzLg="8" nzXl="10" >
         <div nz-row  nzType="flex" nzJustify="center">
             <h2>Выбор направления</h2>
         </div>
+<<<<<<< HEAD
         <div nz-row class="form-container">
             <h2>Выбор направления</h2>
             <button nz-button nzType="primary" (click)="ModalEvent(1)" [nzLoading]="isLoadingOne">
@@ -19,6 +33,9 @@
             
 
         </div>
+=======
+
+>>>>>>> 26b59ae960d84525184d25c12fe3792363bca961
     </div>
         <!-- <div nz-row nzSpan="12"> -->
         <!-- </div> -->

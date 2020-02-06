@@ -10,6 +10,7 @@
 }
 
 nz-page-header {
+<<<<<<< HEAD
     border: 1px solid rgb(235, 237, 240);
   }
 
@@ -20,3 +21,33 @@ nz-page-header {
     width: 100%;
     height: 100vh;
 }  
+=======
+    border: 1px solid white;
+    background-color:  white;
+  }
+
+.header-block{
+    padding: 0 100px 0 100px;
+    background-color:  white;
+}
+
+.button-on-header{
+    border: 0;
+    border-color: none; 
+}
+
+.button-on-header:hover{
+    border-radius: 30px;
+    background-color: #03cc61;
+    color: white;
+}
+
+.on-main-divider{
+    color:  #03cc61;
+    width: 50px;
+}
+
+.modal-container{
+    height: 100vh;
+}
+>>>>>>> 26b59ae960d84525184d25c12fe3792363bca961
