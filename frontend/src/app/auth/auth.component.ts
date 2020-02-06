@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from './interface';
 import { HttpService } from './http.service';
 import { Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
+// import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-auth',
@@ -12,11 +12,13 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class AuthComponent{
 
+  passwordVisible = false;
+  password: string;
   stem = "none";
 
   user: User = new User(); // данные от пользователя
       
-  constructor(private httpService: HttpService, private cookiService: CookieService, public router: Router){}
+  constructor(private httpService: HttpService, public router: Router){}
 
   receivedData: User; // полученные данные
   sendDataUser(user: User){
@@ -26,7 +28,7 @@ export class AuthComponent{
     else{
     this.httpService.postData(user)
       .subscribe(
-        (data: User) => {this.receivedData=data, this.cookiService.set('_ak_', this.receivedData.access_token),alert('authorization is done!'); let username = this.user.Login; this.router.navigate(['/'], { queryParams: { username } })},
+        (data: User) => {this.receivedData=data,console.log('_ak_', this.receivedData.access_token),alert('authorization is done!'); let username = this.user.Login; this.router.navigate(['/'], { queryParams: { username } })},
         error => { if(error.status == 500){ alert('invalid login'); this.stem = "block"; } else {alert('invalid password'); this.stem = "block"; }}
       );
     }

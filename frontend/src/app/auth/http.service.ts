@@ -9,6 +9,6 @@ export class HttpService{
      
     postData(user: User){
         const body = {login: user.Login, password: user.Password};
-        return this.http.post('/api/auth', body); 
+        return this.http.post('/api/test', body); 
     }
 }

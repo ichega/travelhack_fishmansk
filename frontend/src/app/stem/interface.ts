@@ -1,3 +1,3 @@
-export class User{
-    Email: string;
-}
+// export class User{
+//     Email: string;
+// }

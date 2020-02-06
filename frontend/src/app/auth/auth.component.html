@@ -42,5 +42,11 @@
         <p class="message"><a routerLink="/regist" style="color: #4CAF50;">Создать аккаунт?</a></p>
     </div>
 
+    <nz-carousel [nzEffect]="effect">
+        <div nz-carousel-content *ngFor="let index of array">
+          <h3>{{ index }}</h3>
+        </div>
+      </nz-carousel>
+z
 
 </div>
