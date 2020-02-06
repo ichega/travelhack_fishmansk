@@ -1,5 +1,18 @@
 <div >
-    <nz-page-header (nzBack)="onBack()" nzBackIcon nzTitle="Title" nzSubtitle="This is a subtitle"> </nz-page-header>
+    <div nz-row class="header-block">
+    <nz-page-header (nzBack)="onBack()" > 
+        
+        <nz-page-header-title><img src="../../assets/logo2.png" width="139" height="25" ></nz-page-header-title>
+        <nz-divider class="on-main-divider" nzType="vertical"></nz-divider>
+        <nz-page-header-title>Путешествия</nz-page-header-title>
+        <nz-divider class="on-main-divider" nzType="vertical"></nz-divider>
+
+        <nz-page-header-extra>
+        <button nz-button class="button-on-header">Подбор туров</button>
+        <button nz-button class="button-on-header">Карты</button>
+      </nz-page-header-extra>
+    </nz-page-header>
+</div>
 </div>
 <div class="main-container" nz-row nzType="flex" nzJustify="center" nzAlign="middle">
     
@@ -8,6 +21,6 @@
         <div nz-row nzSpan="12">
             <h2>Выбор направления</h2>
         </div>
-        
+
     </div>
 </div>
