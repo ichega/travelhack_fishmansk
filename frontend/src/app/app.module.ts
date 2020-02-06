@@ -15,6 +15,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { RegistComponent } from './regist/regist.component';
 import { StemComponent } from './stem/stem.component';
+import { MainComponent } from './main/main.component';
 registerLocaleData(en);
 
 
@@ -23,7 +24,8 @@ registerLocaleData(en);
     AppComponent,
     AuthComponent,
     RegistComponent,
-    StemComponent
+    StemComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
