@@ -1,13 +1,26 @@
+<div *ngIf="openModal" class="modal-container">
+    sdfsdfsdfsdfsdfsdf
+    <button (click)="ModalEvent(0)">x</button>  
+</div>
 <div >
     <nz-page-header (nzBack)="onBack()" nzBackIcon nzTitle="Title" nzSubtitle="This is a subtitle"> </nz-page-header>
 </div>
-<div class="main-container" nz-row nzType="flex" nzJustify="center" nzAlign="middle">
-    
-
-    <div nz-col nzSpan="12" class="form-container">
-        <div nz-row nzSpan="12">
+<div class="main-container" nz-row nzType="flex" nzJustify="center" nzAlign="top">
+    <div nz-col nzXs="20" nzSm="4" nzMd="6" nzLg="8" nzXl="10" >
+        <div nz-row  nzType="flex" nzJustify="center">
             <h2>Выбор направления</h2>
         </div>
-        
+        <div nz-row class="form-container">
+            <h2>Выбор направления</h2>
+            <button nz-button nzType="primary" (click)="ModalEvent(1)" [nzLoading]="isLoadingOne">
+                Найти туры
+            </button>
+
+            
+
+        </div>
     </div>
+        <!-- <div nz-row nzSpan="12"> -->
+        <!-- </div> -->
+        
 </div>
