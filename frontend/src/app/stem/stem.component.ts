@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-// import { User } from './interface';
-// import { HttpService } from './http.service';
-import { Router } from '@angular/router';
+
+
+
 
 @Component({
   selector: 'app-stem',
-  templateUrl: './stem.component.html',
+  templateUrl: './stem.component.html', 
   styleUrls: ['./stem.component.css']
   // providers: [HttpService],
 })
