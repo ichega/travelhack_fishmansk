@@ -1,53 +1,147 @@
-.form-container{
-    background: #FFFFFF;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
 .main-container{
     width: 100%;
     height: 90vh;
 }
-
-nz-page-header {
-<<<<<<< HEAD
-    border: 1px solid rgb(235, 237, 240);
-  }
-
 .modal-container{
     position: absolute;
     background-color: white;
     z-index: 5;
     width: 100%;
     height: 100vh;
-}  
-=======
-    border: 1px solid white;
-    background-color:  white;
-  }
-
-.header-block{
-    padding: 0 100px 0 100px;
-    background-color:  white;
 }
-
-.button-on-header{
-    border: 0;
-    border-color: none; 
-}
-
-.button-on-header:hover{
-    border-radius: 30px;
-    background-color: #03cc61;
-    color: white;
-}
-
-.on-main-divider{
-    color:  #03cc61;
-    width: 50px;
-}
-
 .modal-container{
     height: 100vh;
 }
->>>>>>> 26b59ae960d84525184d25c12fe3792363bca961
+.form-container{
+    margin-top: 20px;
+    background: #FFFFFF;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+nz-select {
+    width: 100%;
+    /* padding: 10px;     */
+}
+.ant-calendar-picker .ant-calendar-picker-large{
+    width: 100%;
+    background-color: red;
+}
+
+.button-search{
+    padding: 15px 35px 35px 35px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    color: #fff;
+    background: #731982;
+}
+
+.button-search:hover{
+    background: #9448a0;
+}
+
+
+
+
+
+.left-human{
+    z-index: -10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.left-flowers{
+    position:absolute; z-index: -11;
+}
+.right-flowers{
+    position:absolute; z-index: -11; bottom: 0; right: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .left-human{
+        z-index: -10;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 245px;
+        height: 240px;
+    }
+    .left-flowers{
+        position:absolute; z-index: -11;
+        width: 200px;
+        height: 200px;
+    }
+    .right-flowers{
+        position:absolute; z-index: -11; bottom: 0; right: 0;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.chat-block{
+    position:absolute; bottom: 20px; right: 50px;
+    z-index: 2;
+}
+
+.chat-btn{
+    width: 50px; height: 50px;
+    background-color: #731982;
+    border: 0;
+    float: right;
+}
+
+.chat-btn:hover{
+    background: #9448a0;
+}
+
+.chat-btn:active{
+    background: #03cc61;
+}
+
+.chat{
+    width: 400px;
+    height: 550px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
+    -moz-transition-duration: 2s;
+    transition-duration: 2s;
+}
+
+.header-chat{
+    position: absolute;
+    padding: 20px 50px 50px 50px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+    width: 100%;
+    height: 200px;
+    background-color: #731982;
+    z-index: 3;
+}
+
+
+.main-block-chat{
+    overflow-y: auto;
+    position: absolute;
+    z-index: 5;
+    margin-top: 100px;
+    width: 100%;
+    height: 65%;
+    
+}
+
+.hot-turs-chat{
+    margin: 10px auto;
+    border-radius: 10px;
+    height: 200px; width: 90%; 
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.hot-turs-img{
+    padding-left: 10px;
+    width: 100%;
+}

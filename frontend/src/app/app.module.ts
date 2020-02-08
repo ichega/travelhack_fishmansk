@@ -9,14 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AuthComponent } from './auth/auth.component';
-import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+import { NgZorroAntdModule, NZ_I18N, ru_RU } from 'ng-zorro-antd';
 
 import { registerLocaleData } from '@angular/common';
-import en from '@angular/common/locales/en';
+import ru from '@angular/common/locales/ru';
 import { RegistComponent } from './regist/regist.component';
 import { StemComponent } from './stem/stem.component';
 import { MainComponent } from './main/main.component';
-registerLocaleData(en);
+import { HeaderComponent } from './main/header/header.component';
+registerLocaleData(ru);
 
 
 @NgModule({
@@ -25,7 +26,8 @@ registerLocaleData(en);
     AuthComponent,
     RegistComponent,
     StemComponent,
-    MainComponent
+    MainComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,7 @@ registerLocaleData(en);
     NgZorroAntdModule
   ],
   providers: [
-    { provide: NZ_I18N, useValue: en_US }
+    { provide: NZ_I18N, useValue: ru_RU }
   ],
   bootstrap: [AppComponent]
 })

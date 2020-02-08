@@ -2,42 +2,129 @@
     sdfsdfsdfsdfsdfsdf
     <button (click)="ModalEvent(0)">x</button>  
 </div>
-<div >
-    <div nz-row class="header-block">
-    <nz-page-header (nzBack)="onBack()" > 
-        
-        <nz-page-header-title><img src="../../assets/logo2.png" width="139" height="25" ></nz-page-header-title>
-        <nz-divider class="on-main-divider" nzType="vertical"></nz-divider>
-        <nz-page-header-title>Путешествия</nz-page-header-title>
-        <nz-divider class="on-main-divider" nzType="vertical"></nz-divider>
 
-        <nz-page-header-extra>
-        <button nz-button class="button-on-header">Подбор туров</button>
-        <button nz-button class="button-on-header">Карты</button>
-      </nz-page-header-extra>
-    </nz-page-header>
-</div>
-</div>
+
+
+<app-header></app-header>
+
+
+<img class="left-flowers" src="../../assets/flowers-left.png" alt="">
+<img class="right-flowers" src="../../assets/flowers-right.png" alt="">
+<img class="left-human" src="../../assets/men.png" alt="">
+
+
+
+    <div class="chat-block">
+        <div *ngIf="chatBlock" class="chat"  [@enterAnimation]>
+            <div class="header-chat">
+                <h1 style="font-size: 30px; color:white">Привет гость 👋</h1>
+                <h2 style="font-size: 13px;color:rgb(212, 211, 211)">Я помогу тебе с вопросами и выбором туров!</h2>
+            </div>
+            <div class="main-block-chat">
+                <div class="hot-turs-chat">
+                    <h2 style="font-size: 13px; padding: 10px; color: lightcoral;"><i nz-icon nzType="fire" nzTheme="outline"></i> горящий тур:</h2>
+                    <div nz-row>
+                        <div nz-col nzSpan="12">
+                            <img src="../../assets/hot-tour.jpg" class="hot-turs-img" alt="">
+                        </div>
+                        <div nz-col nzSpan="12" style="padding: 10px;">
+                            <nz-rate [ngModel]="2" nzDisabled></nz-rate>
+                            <h5>Кадрие, Белек, Турция</h5>
+                                <h3 style="font-weight: bold; margin-top: 5px;">Belkon Hotel</h3>
+                            <h3 style="font-weight: bold; margin-top: 5px;">22 553 ₽</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <button nzValue="large" class="chat-btn" nzType="primary" (click)="openChat(1)" nz-button nzShape="circle">
+            <i nz-icon nzType="message" nzTheme="outline"></i>
+        </button>
+    </div>
+
+
+
+
 <div class="main-container" nz-row nzType="flex" nzJustify="center" nzAlign="top">
-    <div nz-col nzXs="20" nzSm="4" nzMd="6" nzLg="8" nzXl="10" >
-        <div nz-row  nzType="flex" nzJustify="center">
-            <h2>Выбор направления</h2>
+    <div nz-col nzXs="20" nzSm="16" nzMd="12" nzLg="14" nzXl="16" >
+        <div style="margin-top: 50px;" nz-row nzType="flex" nzJustify="center">
+            <h1 style="color: white; font-weight: bolder; font-size: 3em; text-align: center;">Поиск оптимальных туров</h1>
         </div>
-<<<<<<< HEAD
         <div nz-row class="form-container">
-            <h2>Выбор направления</h2>
-            <button nz-button nzType="primary" (click)="ModalEvent(1)" [nzLoading]="isLoadingOne">
+            <div nz-col>
+                <div nz-row>
+                    <div nz-col nzMd="12" nzLg="12" nzXl="12">
+                        <nz-select [nzSize]="'large'" nzAllowClear nzPlaceHolder="Город вылета" [(ngModel)]="selectedCity" [nzCustomTemplate]="custom">
+                            <nz-option nzCustomContent nzLabel="Москва" nzValue="Москва"> 
+                                Москва
+                            </nz-option>
+                            <nz-option nzCustomContent nzLabel="Санкт-Петербург" nzValue="Санкт-Петербург"> 
+                                Санкт-Петербург
+                            </nz-option>
+                            <nz-option nzCustomContent nzLabel="Екатерингбург" nzValue="Екатерингбург">
+                                Екатерингбург
+                            </nz-option>
+                          </nz-select>
+                          <ng-template #custom let-selected>
+                            <span>{{ selected.nzValue }}</span>
+                          </ng-template>
+                    </div>
+                    <div nz-col nzMd="12" nzLg="12" nzXl="12">
+                        <nz-select [nzSize]="'large'" nzAllowClear nzPlaceHolder="Страна прилета" [(ngModel)]="selectedCountry" [nzCustomTemplate]="custom">
+                            <nz-option-group nzLabel="Без визы">
+                                <nz-option nzCustomContent nzLabel="Абхазия" nzValue="Абхазия"> 
+                                    <img src="../../assets/Turkey.png"> Турция
+                                </nz-option>
+                                <nz-option nzCustomContent nzLabel="Тайланд" nzValue="Тайланд">
+                                    <img src="../../assets/Thailand.png"> Тайланд
+                                </nz-option>
+                                <nz-option nzCustomContent nzLabel="Абхазия" nzValue="Абхазия"> 
+                                    <img src="../../assets/Abkhazia.png"> Абхазия
+                                </nz-option>
+                                <nz-option nzCustomContent nzLabel="Индонезия" nzValue="Индонезия"> 
+                                    <img src="../../assets/Indonesia.png"> Индонезия
+                                </nz-option>
+                            </nz-option-group>
+                            <nz-option-group nzLabel="Шенген">
+                                <nz-option nzCustomContent nzLabel="Испания" nzValue="Испания"> 
+                                    <img src="../../assets/Spain.png"> Испания
+                                </nz-option>
+                                <nz-option nzCustomContent nzLabel="Фрацния" nzValue="Фрацния"> 
+                                    <img src="../../assets/France.png"> Фрацния
+                                </nz-option>
+                                <nz-option nzCustomContent nzLabel="Швейцария" nzValue="Швейцария"> 
+                                    <img src="../../assets/Switzerland.png"> Швейцария
+                                </nz-option>
+                            </nz-option-group>
+                          </nz-select>
+                          <ng-template #custom let-selected>
+                            <span>{{ selected.nzValue }}</span>
+                          </ng-template>
+                    </div>
+                </div>
+                <div nz-row >
+                    <div nz-col nz-col nzMd="12" nzLg="12" nzXl="12">
+                        <div nz-row>
+                            <div nz-col nz-col nzMd="12" nzLg="12" nzXl="12">
+                                <nz-date-picker  [nzSize]="'large'"></nz-date-picker>
+                            </div>
+                            <div nz-col nz-col nzMd="12" nzLg="12" nzXl="12">
+                                <nz-input-number [nzFormatter]="CountDays" style="width: 100%;"  [(ngModel)]="ValueDays" [nzSize]="'large'" [nzMin]="1" [nzMax]="10" [nzStep]="1"></nz-input-number>
+                            </div>
+                        </div>
+                    </div>
+                    <div nz-col nz-col nzMd="12" nzLg="12" nzXl="12">
+                        <nz-input-number [nzFormatter]="CountHuman" style="width: 100%;" [(ngModel)]="ValueHuman" [nzSize]="'large'" [nzMin]="1" [nzMax]="10" [nzStep]="1"></nz-input-number>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 30px;">
+            <button nz-button nzValue="large" class="button-search" (click)="ModalEvent(1)" [nzLoading]="isLoadingOne">
                 Найти туры
             </button>
-
-            
-
         </div>
-=======
-
->>>>>>> 26b59ae960d84525184d25c12fe3792363bca961
     </div>
-        <!-- <div nz-row nzSpan="12"> -->
-        <!-- </div> -->
         
 </div>
